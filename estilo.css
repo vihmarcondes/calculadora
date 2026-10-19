@@ -1,0 +1,120 @@
+/* Inclui bordas e preenchimentos nas dimensões dos elementos. */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Centraliza a calculadora na página. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+
+
+  background: #eef2f7;
+  color: #172338;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Define a aparência da área principal. */
+.calculadora {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+
+
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 36px #17233818;
+}
+
+
+h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+
+p {
+  line-height: 1.5;
+}
+
+
+/* Organiza os elementos do formulário. */
+form {
+  display: grid;
+  gap: 10px;
+}
+
+
+label {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+
+/* Aparência compartilhada pelos campos e botões. */
+input,
+select,
+button {
+  font: inherit;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+
+input,
+select {
+  width: 100%;
+  border: 1px solid #8996a7;
+}
+
+
+/* Organiza os botões lado a lado. */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+
+button {
+  flex: 1;
+  border: none;
+  background: #174eae;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Diferencia o botão de limpeza. */
+#limpar {
+  background: #e5eaf2;
+  color: #172338;
+}
+
+
+/* Altera suavemente a aparência ao passar o mouse. */
+button:hover {
+  filter: brightness(0.95);
+}
+
+
+/* Destaca o elemento selecionado pelo teclado. */
+:focus-visible {
+  outline: 3px solid #d47900;
+  outline-offset: 3px;
+}
+
+
+/* Área de apresentação do resultado. */
+#resultado {
+  padding: 14px;
+  background: #eef2f7;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
