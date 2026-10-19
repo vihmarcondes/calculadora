@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+
+  <!-- Ajusta a página à largura do dispositivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Calculadora simples</title>
+
+
+  <!-- Conecta o arquivo CSS. -->
+  <link rel="stylesheet" href="estilo.css">
+
+
+  <!-- Carrega o JavaScript após o processamento do HTML. -->
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+  <main class="calculadora">
+    <h1>Calculadora simples</h1>
+
+
+    <p>Informe dois números e escolha uma operação.</p>
+
+
+    <!-- A validação dos valores será realizada no JavaScript. -->
+    <form id="formulario" novalidate>
+      <label for="numero1">Primeiro número</label>
+      <input
+        id="numero1"
+        type="number"
+        step="any"
+        required
+      >
+
+
+      <label for="operacao">Operação</label>
+      <select id="operacao">
+        <option value="somar">Somar (+)</option>
+        <option value="subtrair">Subtrair (−)</option>
+        <option value="multiplicar">Multiplicar (×)</option>
+        <option value="dividir">Dividir (÷)</option>
+      </select>
+
+
+      <label for="numero2">Segundo número</label>
+      <input
+        id="numero2"
+        type="number"
+        step="any"
+        required
+      >
+
+
+      <div class="acoes">
+        <button type="submit">Calcular</button>
+
+
+        <button type="button" id="limpar">
+          Limpar
+        </button>
+      </div>
+    </form>
+
+
+    <!-- Apresenta o resultado ou as mensagens de validação. -->
+    <p id="resultado" role="status" aria-live="polite">
+      O resultado aparecerá aqui.
+    </p>
+  </main>
+</body>
+</html>
